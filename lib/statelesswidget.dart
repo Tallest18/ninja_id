@@ -5,16 +5,8 @@ void main() =>
     home: NinjaCard(),
   ));
 
-  class NinjaCard extends StatefulWidget {
+  class NinjaCard extends StatelessWidget {
   const NinjaCard({super.key});
-
-  @override
-  State<NinjaCard> createState() => _NinjaCardState();
-}
-
-class _NinjaCardState extends State<NinjaCard> {
-
-  int ninjaLevel = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +17,6 @@ class _NinjaCardState extends State<NinjaCard> {
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            ninjaLevel += 1;
-          });
-        },
-        backgroundColor: Colors.grey[800],
-        child: Icon(Icons.add),
       ),
       body: 
         Padding(padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -76,7 +59,7 @@ class _NinjaCardState extends State<NinjaCard> {
                 ),
                 SizedBox(height: 10.0),
                 Text( 
-                  '$ninjaLevel',
+                  '8',
                   style: TextStyle(
                     color: Colors.amberAccent[200],
                     letterSpacing: 2.0,
